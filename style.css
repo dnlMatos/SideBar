@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins&display=swap");
+
+:root {
+  --corpo: "Poppins", sans-serif;
+  --titulo: "Krona One", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: url(/sideBar/charles-forerunner-3fPXt37X6UQ-unsplash.jpg)
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--corpo);
+  color: black;
+}
+
+.navigation {
+  position: relative;
+  width: 65px;
+  height: 95vh;
+  color: #3d3f40;
+  background: white;
+  overflow: hidden;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.expandido {
+  width: 17%;
+}
+
+aside ul {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+aside ul li {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  height: 50px;
+  margin: 15px 0;
+  position: relative;
+  width: 100%;
+}
+
+aside ul li:hover {
+  transition: 0.5s;
+  background: rgb(230, 230, 230);
+}
+
+.fa {
+  height: 25px;
+}
+
+aside ul .extremoSup {
+  top: -10px;
+}
+
+aside ul .extremoInf {
+  position: absolute;
+  bottom: 0;
+}
+
+aside nav ul li a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+aside nav ul li a .icon {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+aside nav ul li a .icon .linha1 {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: #3d3f40;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+aside nav ul li a .icon .linha1::after,
+.linha1::before {
+  content: "";
+  position: absolute;
+  margin: 5px 0;
+  width: 100%;
+  height: 2px;
+  background: #3d3f40;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+
+.expandido nav ul li a .icon .linha1::after, .linha1::before {
+  margin: 0;
+}
+
+aside nav ul li a .icon .linha1::after{
+  margin-top: -5px;
+}
+
+aside nav ul li a .icon .linha1::before{
+  margin-bottom: -5px;
+}
+
+aside nav ul li a .icon .linha1::before {
+  bottom: 0;
+}
+
+.expandido nav ul li a .icon .linha1 {
+  height: 0;
+  transition: .5s;
+}
+
+.expandido nav ul li a .icon .linha1::after {
+  top: 0;
+  transition: 0.5s all;
+  transform: rotate(-230deg);
+}
+
+.expandido nav ul li a .icon .linha1::before {
+  top: 0;
+  transition: 0.5s all;
+  transform: rotate(230deg);
+}
+
+aside nav ul li a .title {
+  cursor: pointer;
+  position: relative;
+  left: 13px;
+  margin: 0 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
